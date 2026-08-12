@@ -114,7 +114,7 @@
           <article class="course"><span>06</span><h3>The Shop Floor MBA</h3><p>Help frontline leaders understand how safety, quality, service, labor, downtime, yield, inventory, cost, and KPIs connect to business performance.</p></article>
         </div>
         <div style="margin-top:28px;text-align:center;">
-          <button class="btn secondary" type="button" onclick="downloadCatalog()">Download Course Catalog PDF</button>
+          <button class="btn secondary" type="button" onclick="openCatalog()">Open Course Catalog PDF</button>
         </div>
       </div>
     </section>
@@ -235,7 +235,11 @@
   </footer>
 
   <script>
-    async function downloadCatalog() {
+    async function openCatalog() {
+      const viewer = window.open('', '_blank');
+      if (viewer) {
+        viewer.document.write('<!doctype html><html><head><title>InStride Course Catalog</title><meta name="viewport" content="width=device-width,initial-scale=1"></head><body style="font-family:Arial,sans-serif;padding:24px;color:#0d3556"><p>Opening the InStride Course Catalog...</p></body></html>');
+      }
       try {
         const response = await fetch('assets/InStride_Course_Catalog.b64');
         if (!response.ok) throw new Error('Catalog data could not be loaded.');
@@ -245,15 +249,15 @@
         for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
         const blob = new Blob([bytes], { type: 'application/pdf' });
         const url = URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = 'InStride_Course_Catalog.pdf';
-        document.body.appendChild(link);
-        link.click();
-        link.remove();
-        URL.revokeObjectURL(url);
+        if (viewer) {
+          viewer.location.href = url;
+        } else {
+          window.location.href = url;
+        }
+        setTimeout(() => URL.revokeObjectURL(url), 60000);
       } catch (error) {
-        alert('The course catalog could not be downloaded. Please email InStride and we will send it directly.');
+        if (viewer) viewer.close();
+        alert('The course catalog could not be opened. Please email InStride and we will send it directly.');
       }
     }
   </script>
