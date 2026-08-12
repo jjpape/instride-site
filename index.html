@@ -98,6 +98,9 @@
           <article class="course"><span>05</span><h3>Root Cause Analysis That Actually Works</h3><p>Define problems, contain issues, gather evidence, verify causes, and sustain corrective actions that hold up over time.</p></article>
           <article class="course"><span>06</span><h3>The Shop Floor MBA</h3><p>Help frontline leaders understand how safety, quality, service, labor, downtime, yield, inventory, cost, and KPIs connect to business performance.</p></article>
         </div>
+        <div style="margin-top:28px;text-align:center;">
+          <button class="btn secondary" type="button" onclick="downloadCatalog()">Download Course Catalog PDF</button>
+        </div>
       </div>
     </section>
 
@@ -202,6 +205,7 @@
         <div class="contact-actions">
           <a class="btn primary wide" href="mailto:jereb.pape@outlook.com?subject=InStride%20Training%20or%20Speaking%20Inquiry">Email InStride</a>
           <p class="contact-email">jereb.pape@outlook.com</p>
+          <a class="contact-email" href="https://www.linkedin.com/in/jereb-pape-2ba810254" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <p class="micro">Based in southeast Iowa · Available for regional and travel delivery</p>
         </div>
       </div>
@@ -211,8 +215,32 @@
   <footer>
     <div class="container footer-wrap">
       <a class="footer-logo" href="#top" aria-label="Back to top"><img src="assets/instride-logo.svg" alt="InStride, Leadership in Motion" /></a>
-      <div><span>thinkinstride.com</span><span>Founded 2024 · © 2026 InStride LLC</span></div>
+      <div><span>thinkinstride.com</span><span><a href="https://www.linkedin.com/in/jereb-pape-2ba810254" target="_blank" rel="noopener noreferrer">LinkedIn</a></span><span>Founded 2024 · © 2026 InStride LLC</span></div>
     </div>
   </footer>
+
+  <script>
+    async function downloadCatalog() {
+      try {
+        const response = await fetch('assets/InStride_Course_Catalog.b64');
+        if (!response.ok) throw new Error('Catalog data could not be loaded.');
+        const base64 = (await response.text()).trim();
+        const binary = atob(base64);
+        const bytes = new Uint8Array(binary.length);
+        for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+        const blob = new Blob([bytes], { type: 'application/pdf' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'InStride_Course_Catalog.pdf';
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(url);
+      } catch (error) {
+        alert('The course catalog could not be downloaded. Please email InStride and we will send it directly.');
+      }
+    }
+  </script>
 </body>
 </html>
