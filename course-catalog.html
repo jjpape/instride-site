@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InStride Course Catalog</title>
+  <style>
+    :root{--navy:#0d3556;--teal:#0b9db7;--light:#f4f9fb;--text:#26333d;--muted:#5e6d78;--line:#d9e5ea}
+    *{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#eef5f7;line-height:1.55}.wrap{max-width:920px;margin:0 auto;background:#fff;min-height:100vh}.top{padding:28px 36px;background:var(--navy);color:#fff;display:flex;justify-content:space-between;align-items:center;gap:20px}.brand{font-size:30px;font-weight:800;letter-spacing:.6px}.tag{color:#d4e9ef;font-size:14px}.actions{display:flex;gap:10px}.btn{display:inline-block;padding:11px 16px;border-radius:999px;text-decoration:none;font-weight:700;border:0;cursor:pointer}.btn.light{background:#fff;color:var(--navy)}.btn.outline{border:1px solid #9ec9d4;color:#fff;background:transparent}.hero{padding:48px 36px 30px;background:linear-gradient(180deg,#fff,#f7fbfc)}.eyebrow{font-size:12px;font-weight:800;letter-spacing:1.5px;color:var(--teal);margin:0 0 10px}.hero h1{font-size:42px;line-height:1.05;color:var(--navy);margin:0 0 16px}.hero p{font-size:18px;color:#4d5d68;max-width:720px}.section{padding:34px 36px}.section.alt{background:var(--light)}h2{color:var(--navy);font-size:28px;margin:0 0 12px}.lead{color:var(--muted);margin:0 0 24px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.card{border:1px solid var(--line);border-radius:14px;padding:20px;background:#fff}.card .num{font-size:11px;font-weight:800;color:var(--teal);letter-spacing:1px}.card h3{color:var(--navy);font-size:19px;line-height:1.25;margin:7px 0 8px}.card p{margin:0;color:#586873;font-size:15px}.mini{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.mini div{padding:14px 16px;background:#fff;border:1px solid var(--line);border-radius:10px;font-weight:700;color:var(--navy)}.formats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.format{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px}.format strong{display:block;color:var(--navy);margin-bottom:4px}.bio{background:var(--navy);color:#eaf3f6;padding:34px 36px}.bio h2{color:#fff}.bio p{color:#d3e0e6}.contact{padding:32px 36px;text-align:center}.contact h2{margin-bottom:8px}.contact a{color:var(--navy);font-weight:700}.footer{padding:22px 36px;background:#092942;color:#c7d8e0;font-size:13px;display:flex;justify-content:space-between;gap:20px}.footer strong{color:#fff}
+    @media(max-width:700px){.top{padding:20px;align-items:flex-start;flex-direction:column}.actions{width:100%}.actions .btn{flex:1;text-align:center}.hero{padding:34px 20px 24px}.hero h1{font-size:34px}.hero p{font-size:17px}.section,.bio,.contact{padding:28px 20px}.grid,.mini,.formats{grid-template-columns:1fr}.card{padding:18px}.footer{padding:20px;flex-direction:column}.brand{font-size:26px}}
+    @media print{body{background:#fff}.wrap{max-width:none}.top{background:#fff;color:#000;border-bottom:2px solid #0d3556}.tag{color:#333}.actions{display:none}.section,.hero,.bio,.contact{break-inside:avoid}.bio{background:#fff;color:#000;border-top:2px solid #0d3556}.bio h2,.bio p{color:#000}.footer{background:#fff;color:#333;border-top:1px solid #ccc}.footer strong{color:#000}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <div><div class="brand">INSTRIDE</div><div class="tag">Think better. Lead better. Work better.</div></div>
+      <div class="actions"><a class="btn outline" href="index.html">Back to Site</a><button class="btn light" onclick="window.print()">Print or Save PDF</button></div>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">COURSE CATALOG</p>
+      <h1>Practical leadership and problem-solving training for the real workplace.</h1>
+      <p>InStride delivers focused, instructor-led learning for leaders and teams who need practical tools they can use immediately.</p>
+    </section>
+
+    <section class="section alt">
+      <h2>Core Workshop Offerings</h2>
+      <p class="lead">Available as focused 4-hour workshops or full-day 8-hour sessions. Content can be customized around the audience, organization, and business challenge.</p>
+      <div class="grid">
+        <article class="card"><div class="num">01</div><h3>Critical Thinking & Structured Decision Making</h3><p>Separate facts from assumptions, challenge bias, evaluate risk, and make stronger decisions with a repeatable approach.</p></article>
+        <article class="card"><div class="num">02</div><h3>From Firefighting to Problem Solving</h3><p>Move beyond recurring symptoms and build a disciplined process for solving and preventing repeat problems.</p></article>
+        <article class="card"><div class="num">03</div><h3>Frontline Leadership: From Peer to Leader</h3><p>Build credibility, communication, accountability, delegation, and coaching skills for new and emerging supervisors.</p></article>
+        <article class="card"><div class="num">04</div><h3>Accountability Without Micromanagement</h3><p>Create clear expectations and ownership while avoiding unnecessary control, confusion, and dependency.</p></article>
+        <article class="card"><div class="num">05</div><h3>Root Cause Analysis That Actually Works</h3><p>Define problems, contain issues, gather evidence, verify causes, and sustain corrective actions that hold up over time.</p></article>
+        <article class="card"><div class="num">06</div><h3>The Shop Floor MBA</h3><p>Help frontline leaders understand how safety, quality, service, labor, downtime, yield, inventory, cost, and KPIs connect to business performance.</p></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Additional Training Topics</h2>
+      <div class="mini">
+        <div>Continuous Improvement for People Who Hate Lean</div>
+        <div>Decision Making Under Pressure</div>
+        <div>The First 90 Days as a Supervisor</div>
+        <div>Influence Without Authority</div>
+        <div>Leading Effectively in a Union Environment</div>
+        <div>Reliability Is a Team Sport</div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <h2>Speaking & Leadership Talks</h2>
+      <p class="lead">Interactive 45 to 60 minute talks for leadership programs, employers, chambers, associations, nonprofits, schools, and community organizations.</p>
+      <div class="grid">
+        <article class="card"><h3>Think Better Under Pressure</h3><p>Separate facts, assumptions, emotion, and urgency before making important decisions.</p></article>
+        <article class="card"><h3>The Leadership Lessons Nobody Puts in the Job Description</h3><p>A practical look at ambiguity, difficult conversations, trust, and competing priorities.</p></article>
+        <article class="card"><h3>Why Smart Teams Keep Solving the Same Problems</h3><p>Why organizations get trapped in firefighting and how leaders move toward lasting solutions.</p></article>
+        <article class="card"><h3>Influence Without Authority</h3><p>Build credibility and gain commitment when you do not directly manage the people involved.</p></article>
+        <article class="card"><h3>Accountability Without Micromanagement</h3><p>Create clear expectations, ownership, and follow-through without becoming the bottleneck.</p></article>
+        <article class="card"><h3>Culture Is What You Tolerate</h3><p>How everyday leadership behaviors and standards shape culture more than slogans ever will.</p></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Delivery Options</h2>
+      <div class="formats">
+        <div class="format"><strong>Leadership Talks</strong>45 to 60 minutes for meetings, events, and community programs.</div>
+        <div class="format"><strong>Focused Workshops</strong>4-hour sessions centered on one practical leadership or problem-solving need.</div>
+        <div class="format"><strong>Full-Day Training</strong>8-hour sessions with deeper practice, discussion, exercises, and application.</div>
+      </div>
+    </section>
+
+    <section class="bio">
+      <h2>About Jereb Pape</h2>
+      <p>Jereb Pape is an experienced leader, educator, and problem solver with more than 18 years of experience across operations, manufacturing, continuous improvement, engineering, maintenance and reliability, supply chain, organizational leadership, and workforce development.</p>
+      <p>His background includes labor relations training, work in both union and non-union environments, MBA-level teaching at Mount Mercy University, Leadership Iowa, Greater Burlington Leadership, and four years of service in the United States Coast Guard.</p>
+      <p>Jereb holds an MBA and a Master of Strategic Leadership from Mount Mercy University, along with a BBA from Strayer University.</p>
+    </section>
+
+    <section class="contact">
+      <h2>Start a Conversation</h2>
+      <p><a href="mailto:jereb.pape@outlook.com">jereb.pape@outlook.com</a> · <a href="https://www.linkedin.com/in/jereb-pape-2ba810254" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+      <p>Based in southeast Iowa · Available for regional and travel delivery</p>
+    </section>
+
+    <footer class="footer"><div><strong>InStride</strong><br>thinkinstride.com</div><div>© 2026 InStride LLC</div></footer>
+  </div>
+</body>
+</html>
